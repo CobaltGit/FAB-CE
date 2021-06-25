@@ -5,7 +5,7 @@ WORKDIR /usr/src/fab
 
 COPY / /usr/src/fab 
 
-RUN npm install
+RUN yarn
 
 FROM mhart/alpine-node:slim-12 AS runner
 
