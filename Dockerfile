@@ -1,4 +1,4 @@
-FROM node:erbium-alpine AS builder
+FROM mhart/alpine-node:12 AS builder
 
 RUN mkdir -p /usr/src/fab
 WORKDIR /usr/src/fab
