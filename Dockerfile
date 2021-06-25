@@ -7,7 +7,7 @@ COPY / /usr/src/fab
 
 RUN npm install
 
-FROM node:erbium-alpine AS runner
+FROM mhart/alpine-node:slim-12 AS runner
 
 COPY --from=builder /usr/src/fab /usr/src/fab
 COPY src/entrypoint.sh /usr/src/fab/
