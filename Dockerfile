@@ -15,7 +15,7 @@ WORKDIR /usr/src/fab
 
 RUN apk add gettext --no-cache
 
-ENTRYPOINT /bin/sh -c "envsubst '\$TOKEN' < /usr/src/fab/data/settings.json > /usr/src/fab/data/settings-postenv.json && \
+ENTRYPOINT /bin/sh -c "envsubst < /usr/src/fab/data/settings.json > /usr/src/fab/data/settings-postenv.json && \
     rm /usr/src/fab/data/settings.json && \
     mv /usr/src/fab/data/settings-postenv.json /usr/src/fab/data/settings.json && \
     node bot.js"
